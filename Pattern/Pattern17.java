@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Pattern17 {
+    public static void row(int i,int n)
+    {
+        if(i<=n)
+        {
+            star(1,n-i+1);
+            System.out.println();
+            row(i+1,n);
+        }
+        return;
+    }
+
+    public static void star(int j,int n)
+    {
+        if(j<=n)
+        {
+            System.out.print(j);
+            star(j+1,n);
+        }
+        return;
+    }
+    public static void main(String[] args) {
+        Scanner ob =new Scanner(System.in);
+        System.out.println("Enter value of n:");
+        int n=ob.nextInt();
+        row(1,n);
+    }
+}
